@@ -1,0 +1,31 @@
+---
+title: "Week3-Assignment"
+author: "Adnan Arnaout"
+date: "2023-12-26"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Slide 1 - Import Iris Dataset
+```{r, echo=FALSE, eval=FALSE}
+data("iris")
+```
+
+## Slide 2 - plotly
+```{r, echo=FALSE}
+library(plotly)
+
+p <- plot_ly(data = iris, x = ~Petal.Length, y = ~Petal.Width,
+             type = 'scatter', mode = 'markers',
+             color = ~Species, marker = list(size = 10))
+
+p <- p %>% layout(title = 'Iris Dataset: Petal Dimensions',
+                  xaxis = list(title = 'Petal Length'),
+                  yaxis = list(title = 'Petal Width'))
+
+p
+```
+
