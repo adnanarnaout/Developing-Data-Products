@@ -1,0 +1,29 @@
+---
+title: "app-Rmarkdown-Project"
+author: "Adnan Arnaout"
+date: "2023-12-26"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Predicting MPG from the mtcars dataset
+
+This project goal is to create a  Shiny app that predicts the miles per gallon (mpg) from the mtcars dataset based on user-selected predictors. 
+
+This is how the dataset looks like
+
+```{r}
+head(mtcars)
+```
+## Fitting data to a linear model using lm
+
+Output is mpg and predictors are disp, hp, and wt
+
+```{r}
+model <- lm(mpg ~ disp + hp + wt, data = mtcars)
+summary(model)
+```
+
