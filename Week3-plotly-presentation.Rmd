@@ -7,16 +7,18 @@ output: ioslides_presentation
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+library(plotly)
 ```
 
 ## Slide 1 - Import Iris Dataset
-```{r, echo=FALSE, eval=FALSE}
+```{r, echo=FALSE, eval=TRUE}
 data("iris")
+head(iris)
 ```
 
+
 ## Slide 2 - plotly
-```{r, echo=FALSE}
-library(plotly)
+```{r, echo=FALSE, comment=NA, eval=TRUE}
 
 p <- plot_ly(data = iris, x = ~Petal.Length, y = ~Petal.Width,
              type = 'scatter', mode = 'markers',
