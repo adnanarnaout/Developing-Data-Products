@@ -1,5 +1,5 @@
 ---
-title: "Week-2-Assignment"
+title: "Week-2-Assignment - Rmarkdown and Leaflet"
 author: "Adnan Arnaout"
 date: "2023-12-26"
 output: html_document
@@ -9,8 +9,13 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# World Map - 12-26-2023
+
 ```{r}
-sd 
+library(leaflet)
+my_map <- leaflet() %>% 
+  addTiles()
+my_map 
 ```
 
 ## R Markdown
